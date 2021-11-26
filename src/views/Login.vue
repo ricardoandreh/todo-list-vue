@@ -166,6 +166,9 @@ export default {
           case "auth/weak-password":
             this.weakPassword = true;
             break;
+          case "auth/invalid-email":
+            this.badEmail = true;
+            break;
         }
       }
     },
