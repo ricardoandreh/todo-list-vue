@@ -3,7 +3,11 @@
     <h1 class="h1">Minha lista de tarefas</h1>
     <v-form>
       <v-container>
-        <v-text-field label="Nova tarefa" v-model="novaTarefa">
+        <v-text-field
+          label="Nova tarefa"
+          @keydown.enter.prevent="adicionar"
+          v-model="novaTarefa"
+        >
           <v-icon slot="append" @click="adicionar">mdi-send</v-icon>
         </v-text-field>
       </v-container>
@@ -74,6 +78,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
